@@ -65,3 +65,80 @@ console.log(person.name);
 console.log(person.name.length);
 
 console.log(typeof person);
+
+// 6 - criando e deletando propriedades
+
+const car = {
+    engine: 2.0,
+    brand: "VW",
+    model: "Tiguan",
+    km: 20000,
+};
+
+console.log(car);
+
+car.doors = 4;
+
+console.log(car);
+
+delete car.km;
+
+console.log(car);
+
+// 7 - mais sobre objetos
+
+//objetos literais são instancias da classe Object em JS
+const obj = {
+    a: "teste",
+    b: true,
+};
+
+console.log(obj instanceof Object); //true
+
+
+//podemos alterar propridades de objetos const, só não seu tipo
+const obj2 ={
+    c: [],
+};
+
+//para copiar os dados de um obj para outro usamos o método assign
+
+Object.assign(obj2, obj);
+//primeiro o obj que receberá os dados da cópia, depois o que contem os dados
+//o obj original não é alterado
+console.log(obj2);
+
+// 8 - conhecendo melhor os objetos
+
+//para saber as propriedades de um obj, usamos o método keys
+console.log(Object.keys(obj));
+console.log(Object.keys(obj2));
+console.log(Object.keys(car));
+
+//para saber chave e valor dos objs, usamos entries
+console.log(Object.entries(car));
+
+// 9 - mutação
+
+const a = {
+    name: "Matheus",
+};
+
+const b = a; // nova referência != de novo obj
+//o que acontece com b afeta a e vise versa
+
+console.log(a);
+console.log(b);
+
+console.log(a === b); //true
+
+a.age = 31;
+
+console.log(a);
+console.log(b);
+
+delete b.age;
+
+console.log(a);
+console.log(b);
+
