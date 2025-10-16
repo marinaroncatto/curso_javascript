@@ -142,3 +142,68 @@ delete b.age;
 console.log(a);
 console.log(b);
 
+// 10 - loop em array
+
+const users = ["Matheus", "João", "Pedro", "Miguel"];
+
+for(let i = 0; i < users.length; i++){
+    console.log(`Listando o usuário: ${users[i]}`);
+};
+
+// 11 - push e pop - manipulam final da lista
+
+const array = ["a", "b", "c"];
+
+array.push("d"); //adiciona ao final da lista
+
+console.log(array);
+
+console.log(array.length);
+
+array.pop(); // retira o último elemento e retorna ele
+
+console.log(array);
+
+const itemRemovido = array.pop();
+
+console.log(itemRemovido);
+
+console.log(array);
+
+array.push("z", "x", "y"); // é possível adicionar vários de uma vez
+
+console.log(array);
+
+// 12 - shift e unshift - manipulam início da lista
+
+const letters = ["a", "b", "c"];
+
+const letter = letters.shift(); //retira o elemento e retorna ele
+
+console.log(letter);
+
+console.log(letters);
+
+letters.unshift("p", "q", "r"); // adiciona os elementos no início
+
+letters.unshift("z");
+
+console.log(letters);
+
+
+//  13 - Indexof e lastIndexOf
+
+const myElements = ["Morango", "Maçã", "Abacate", "Pêra", "Abacate"];
+
+console.log(myElements.indexOf("Maçã")); //retorna o índice do primeiro elemento correspondente
+console.log(myElements.indexOf("Abacate"));
+
+//mesma saída
+console.log(myElements[2]);
+console.log(myElements[myElements.indexOf("Abacate")]);
+
+console.log(myElements.lastIndexOf("Abacate")); //último índice contendo este elemento (4)
+
+console.log(myElements.indexOf("Mamão")); // quando não encontra retorna -1
+
+console.log(myElements.lastIndexOf("Mamão")); // -1
